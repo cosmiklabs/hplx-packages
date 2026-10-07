@@ -12,6 +12,8 @@
 # - redux_note: one sentence for the game's page, in plain English.
 # - stories: what this game calls custom content ("custom story", "mod"), or absent if it has none.
 # - edit: the editor's support for this game. "planned" until the editor exists.
+# - [game.copy]: where the launcher looks for your copy of the game. steam_folder is its folder
+#   under a Steam library's steamapps/common. The game itself says whether a folder is a copy.
 
 schema = 1
 
@@ -57,6 +59,9 @@ redux = "available"
 package = "tdd"
 stories = "custom story"
 edit = "planned"
+
+[game.copy]
+steam_folder = "Amnesia The Dark Descent"
 
 [[game]]
 id = "justine"
