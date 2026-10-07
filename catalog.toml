@@ -1,0 +1,111 @@
+# The HPLX catalog: every HPL-family game the launcher lists, and what HPLX can do with each.
+# The launcher knows no game itself; it reads this file (schema 1).
+#
+# Per game:
+# - id, name, engine (HPL1, HPL2, HPL3), developer, year: what the launcher shows.
+# - parent: the game whose install this one lives in (Justine in The Dark Descent, Requiem in
+#   Black Plague); it shares the parent's copy.
+# - redux: the game's Redux version.
+#     "available": a Redux package exists; `package` is the id its hplx-game.toml declares.
+#     "planned": planned; `redux_note` says why it can or cannot start.
+# - redux_note: one sentence for the game's page, in plain English.
+# - stories: what this game calls custom content ("custom story", "mod"), or absent if it has none.
+# - edit: the editor's support for this game. "planned" until the editor exists.
+
+schema = 1
+
+[[game]]
+id = "penumbra-overture"
+name = "Penumbra: Overture"
+engine = "HPL1"
+developer = "Frictional Games"
+year = 2007
+redux = "planned"
+redux_note = "Penumbra's engine source has been released, so HPLX can rebuild its rules from it. Work hasn't started yet."
+edit = "planned"
+
+[[game]]
+id = "penumbra-black-plague"
+name = "Penumbra: Black Plague"
+engine = "HPL1"
+developer = "Frictional Games"
+year = 2008
+redux = "planned"
+redux_note = "Penumbra's engine source has been released, so HPLX can rebuild its rules from it. Work hasn't started yet."
+edit = "planned"
+
+[[game]]
+id = "penumbra-requiem"
+name = "Penumbra: Requiem"
+parent = "penumbra-black-plague"
+engine = "HPL1"
+developer = "Frictional Games"
+year = 2008
+redux = "planned"
+redux_note = "Requiem comes with Black Plague's Redux version, when there is one."
+edit = "planned"
+
+[[game]]
+id = "tdd"
+name = "Amnesia: The Dark Descent"
+engine = "HPL2"
+developer = "Frictional Games"
+year = 2010
+redux = "available"
+package = "tdd"
+stories = "custom story"
+edit = "planned"
+
+[[game]]
+id = "justine"
+name = "Justine"
+parent = "tdd"
+engine = "HPL2"
+developer = "Frictional Games"
+year = 2011
+redux = "planned"
+redux_note = "Justine will come with a later version of The Dark Descent's Redux."
+edit = "planned"
+
+[[game]]
+id = "amfp"
+name = "A Machine for Pigs"
+engine = "HPL2"
+developer = "The Chinese Room"
+year = 2013
+redux = "planned"
+redux_note = "A Machine for Pigs runs on the same engine generation as The Dark Descent; its Redux version comes after The Dark Descent's."
+edit = "planned"
+
+[[game]]
+id = "soma"
+name = "SOMA"
+engine = "HPL3"
+developer = "Frictional Games"
+year = 2015
+redux = "planned"
+redux_note = "HPLX rebuilds each game from its engine's source, and Frictional hasn't released HPL3's. Guessing at the rules without it would get them wrong, so we're waiting, even if that takes years."
+stories = "mod"
+edit = "planned"
+
+[[game]]
+id = "rebirth"
+name = "Amnesia: Rebirth"
+engine = "HPL3"
+developer = "Frictional Games"
+year = 2020
+redux = "planned"
+redux_note = "HPLX rebuilds each game from its engine's source, and Frictional hasn't released HPL3's. Guessing at the rules without it would get them wrong, so we're waiting, even if that takes years."
+stories = "mod"
+edit = "planned"
+
+[[game]]
+id = "bunker"
+name = "Amnesia: The Bunker"
+engine = "HPL3"
+developer = "Frictional Games"
+year = 2023
+redux = "planned"
+redux_note = "HPLX rebuilds each game from its engine's source, and Frictional hasn't released HPL3's. Guessing at the rules without it would get them wrong, so we're waiting, even if that takes years."
+stories = "mod"
+edit = "planned"

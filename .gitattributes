@@ -1,0 +1,20 @@
+# One line ending everywhere, so formatting checks agree across Windows, Linux and macOS.
+* text=auto eol=lf
+
+# Hand-written synthetic HPL2 fixtures are text and should diff as text.
+*.map text
+*.ent text
+*.mat text
+*.snt text
+*.ps text
+*.lang text
+*.cfg text
+*.hps text
+*.dae text
+*.nodes text
+
+*.png binary
+*.jpg binary
+*.dds binary
+*.ogg binary
+*.wav binary
