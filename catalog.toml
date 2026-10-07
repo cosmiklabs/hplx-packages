@@ -5,6 +5,7 @@
 # - id, name, engine (HPL1, HPL2, HPL3), developer, year: what the launcher shows.
 # - parent: the game whose install this one lives in (Justine in The Dark Descent, Requiem in
 #   Black Plague); it shares the parent's copy.
+# - short_name: optional; how the game is named beneath its parent ("Requiem").
 # - redux: the game's Redux version.
 #     "available": a Redux package exists; `package` is the id its hplx-game.toml declares.
 #     "planned": planned; `redux_note` says why it can or cannot start.
@@ -37,6 +38,7 @@ edit = "planned"
 [[game]]
 id = "penumbra-requiem"
 name = "Penumbra: Requiem"
+short_name = "Requiem"
 parent = "penumbra-black-plague"
 engine = "HPL1"
 developer = "Frictional Games"
