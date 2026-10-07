@@ -14,6 +14,9 @@
 # - edit: the editor's support for this game. "planned" until the editor exists.
 # - [game.copy]: where the launcher looks for your copy of the game. steam_folder is its folder
 #   under a Steam library's steamapps/common. The game itself says whether a folder is a copy.
+# - [game.download.<platform>]: where an available Redux package's zip is (url) and its SHA-256
+#   (sha256, hex), per platform ("windows-x86_64"). The zip holds the game's hplx-game.toml and
+#   executable at its root. Without one, the game's page says there is no download yet.
 
 schema = 1
 
