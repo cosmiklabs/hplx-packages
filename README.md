@@ -1,10 +1,10 @@
 # HPLX packages
 
-The index the [HPLX launcher](../hplx-launcher) reads locally or fetches from this repository. Anonymous remote delivery requires making this repository public; it remains private for now.
+The index the [HPLX launcher](../hplx-launcher) reads locally or fetches from this repository. This repository is public and supports anonymous HTTPS delivery.
 
 Run `just check` before committing a catalog change, with the launcher checked out beside this repository. It uses the launcher's parser and fails for missing or invalid input. Fields are described in `catalog.toml`; validation rules live in `hplx-launcher/src/catalog.rs` and its tests.
 
-To contribute, edit the field descriptions and entries in `catalog.toml`: add a game with a unique id; mark a package available only with the id from its `hplx-game.toml`; add a download URL, SHA-256 and optional byte size for a zip containing that manifest and executable at its root; add retail shortcuts only after verifying them on that OS. Run `just check`, then commit as `chore(catalog): summary`. The workflow runs the same check on pushes and pull requests after both repositories become public; Actions stays disabled while private.
+To contribute, edit the field descriptions and entries in `catalog.toml`: add a game with a unique id; mark a package available only with the id from its `hplx-game.toml`; add a download URL, SHA-256 and optional byte size for a zip containing that manifest and executable at its root; add retail shortcuts only after verifying them on that OS. Run `just check`, then commit as `chore(catalog): summary`. The workflow runs the same check on pushes and pull requests once the launcher is also public; Actions remains disabled because that validation checkout is still private.
 
 The current format is TOML schema 1. Optional additions that old launchers can safely ignore need no schema bump; incompatible structures or required behavior do. Unknown schemas are rejected with an update message. The SHA-256 identifies the installed artifact; display versions and source tags belong to GitHub Releases. See [ADR 0046](../hplx/docs/decisions/0046-catalog-delivery-uses-toml-schema-1.md) for the publication contract.
 
