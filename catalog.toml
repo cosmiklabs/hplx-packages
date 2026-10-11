@@ -84,7 +84,7 @@ edit = "planned"
 
 [[game]]
 id = "amfp"
-name = "A Machine for Pigs"
+name = "Amnesia: A Machine for Pigs"
 engine = "HPL2"
 developer = "The Chinese Room"
 year = 2013
