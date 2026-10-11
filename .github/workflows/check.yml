@@ -17,8 +17,8 @@ jobs:
           path: hplx-packages
       - uses: actions/checkout@v4
         with:
-          repository: cosmiklabs/hplx-launcher
-          path: hplx-launcher
+          repository: cosmiklabs/hplx-app
+          path: hplx-app
       - uses: dtolnay/rust-toolchain@stable
       - uses: taiki-e/install-action@v2
         with:
