@@ -88,9 +88,15 @@ name = "Amnesia: A Machine for Pigs"
 engine = "HPL2"
 developer = "The Chinese Room"
 year = 2013
-redux = "planned"
-redux_note = "A Machine for Pigs runs on the same engine generation as The Dark Descent; its Redux version comes after The Dark Descent's."
+redux = "available"
+package = "amfp"
 edit = "planned"
+
+[game.copy]
+steam_folder = "Machine for Pigs"
+
+[game.retail.windows]
+executable = "aamfp.exe"
 
 [[game]]
 id = "soma"
