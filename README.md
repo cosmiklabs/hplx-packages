@@ -8,8 +8,8 @@ To contribute, edit the field descriptions and entries in `catalog.toml`: add a 
 
 The current format is TOML schema 1. Optional additions that older versions of the app can safely ignore need no schema bump; incompatible structures or required behavior do. Unknown schemas are rejected with an update message. The SHA-256 identifies the installed artifact; display versions and source tags belong to GitHub Releases. See [ADR 0046](../hplx/docs/decisions/0046-catalog-delivery-uses-toml-schema-1.md) for the publication contract.
 
-- [`catalog.toml`](catalog.toml): every HPL-family game the app lists (names, engine generation, the game an add-on lives in) and what HPLX can do with each: whether a Redux version exists, and the package id its `hplx-game.toml` declares. The app knows no game in its code; everything it shows about a game comes from here or from the game's own command line.
+- [`catalog.toml`](catalog.toml): every HPL-family game the app lists (names, engine generation, the game an add-on lives in) and what HPLX can do with each: whether an HPLX version exists, and the package id its `hplx-game.toml` declares. The app knows no game in its code; everything it shows about a game comes from here or from the game's own command line.
 
-Each available Redux may name its package's download per platform (a zip and its SHA-256), which the app installs. None does yet: the repositories have private remotes, but no packages have been published. The app already offers updates when a catalog download's SHA-256 differs from the installed one.
+Each available HPLX version may name its package's download per platform (a zip and its SHA-256), which the app installs. None does yet: the repositories have private remotes, but no packages have been published. The app already offers updates when a catalog download's SHA-256 differs from the installed one.
 
 A Cosmik project. Licensed under the GNU General Public License, version 3 or (at your option) any later version — see [LICENSE](LICENSE). Game names are their owners' trademarks; this index claims no affiliation.
